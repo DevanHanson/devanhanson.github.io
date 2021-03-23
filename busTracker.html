@@ -49,7 +49,7 @@ async function addMarkers(){
 
 // Request bus data from MBTA
 async function getBusLocations(){
-	var url = 'https://api-v3.mbta.com/vehicles?api_key=19cf451b3fac4c87a5a50370572244f5filter[route]=1&include=trip';	
+	var url = 'https://api-v3.mbta.com/vehicles?api_key=19cf451b3fac4c87a5a50370572244f5&filter[route]=1&include=trip';	
 	var response = await fetch(url);
 	var json     = await response.json();
 	return json.data;
