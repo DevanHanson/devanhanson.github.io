@@ -1,40 +1,4 @@
-  <!DOCTYPE html>
-<html>
-<head>
-<style>
-.button {
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.button1 {
-  background-color: white;
-  color: black;
-  border: 2px solid #4CAF50;
-}
-
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-  </style>
-</head>
-
-
-<button class="button button1">Green</button>
-<button class="button button2">Blue</button>
-
-
-
-<link rel="stylesheet" type="text/css" href="mystyle.css" />
+ <link rel="stylesheet" type="text/css" href="mystyle.css" />
 <script src="ball.js"></script>
 <body>
   <script>
@@ -42,7 +6,7 @@
     // use "factory" to make any number of balls
     // use update to start random walkers
     // Also "mousedown" will create a ball
-<a href=update() class="btn btn-info" role="button">Open Project</a>
+
     const size = 30;
     const x = [];
     const y = [];
@@ -72,8 +36,9 @@
     }
     // Can you update this so we can paint with more colors?
     function randomColor() {
-      const colors = ["red", "green", "blue", "yellow"];
-      return colors[Math.floor(Math.random() * 5)];
+      // For colors see https://www.w3schools.com/colors/colors_names.asp
+      const colors = ["red", "green", "blue", "yellow", "cyan", "brown"];
+      return colors[Math.floor(Math.random() * 7)];
     }
     function factory(total) {
       let start = 300;
@@ -92,5 +57,17 @@
       document.addEventListener("mousedown", mouse, false);
     }
   </script>
-  
+  <div class="svg-container">
+    <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect
+        x="0"
+        y="0"
+        width="840"
+        height="430"
+        stroke="white"
+        fill="transparent"
+        stroke-width="5"
+      />
+    </svg>
+  </div>
 </body>
