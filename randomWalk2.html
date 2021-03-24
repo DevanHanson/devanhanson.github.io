@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="mystyle.css" />
 <script src="ball.js"></script>
 <body>
+  <p id="demo">Click me.</p>
   <script>
     // This is a random walk.
     // use "factory" to make any number of balls
@@ -54,7 +55,14 @@
     };
     if (window.addEventListener) {
       document.addEventListener("mousedown", mouse, false);
+     
+
+document.getElementById("demo").addEventListener("mouseup", mouseUp);
+      function mouseUp() {
+  document.getElementById("demo").innerHTML = update();
+}
     }
+    
   </script>
   
 </body>
